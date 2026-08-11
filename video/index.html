@@ -23,23 +23,25 @@
         .headline { font-size: 28px; font-weight: 800; line-height: 1.15; margin-bottom: 12px; color: #1a202c; letter-spacing: -1.2px; word-wrap: break-word; }
         .headline-highlight { background: linear-gradient(120deg, #ffd700 0%, #ffc700 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; }
         .subheadline { font-size: 16px; font-weight: 400; line-height: 1.6; color: #4a5568; margin-bottom: 16px; letter-spacing: 0.2px; }
-        .trust-badge { background: #f7fafc; border-radius: 10px; padding: 12px 16px; font-size: 12px; color: #718096; font-weight: 500; display: flex; align-items: center; gap: 8px; margin-bottom: 24px; }
         .video-section { background: #ffffff; padding: 0 20px 20px 20px; }
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); max-height: 280px; }
-        .reveal-section { display: none; opacity: 0; transition: opacity 0.4s ease; pointer-events: none; }
-        .reveal-section.visible { display: block; opacity: 1; pointer-events: auto; }
-        .objection-section { background: #ffffff; padding: 40px 20px; }
-        .objection-title { font-size: 24px; font-weight: 700; margin-bottom: 20px; color: #1a202c; }
-        .faq-item { background: #f7fafc; border-radius: 12px; margin-bottom: 12px; border: 1px solid #e2e8f0; overflow: hidden; }
-        .faq-item[open] { border-color: #4299e1; }
-        .faq-question { cursor: pointer; padding: 16px; font-weight: 600; color: #2d3748; display: flex; justify-content: space-between; align-items: center; user-select: none; }
-        .faq-question::after { content: '+'; font-size: 20px; font-weight: 300; transition: transform 0.3s; }
-        .faq-item[open] .faq-question::after { transform: rotate(45deg); }
-        .faq-item[open] .faq-question { color: #4299e1; }
-        .faq-answer { padding: 0 16px 16px 16px; font-size: 14px; color: #4a5568; line-height: 1.7; margin: 0; }
-        .faq-answer strong { color: #2d3748; }
-        .cta-primary { display: block; width: 100%; background: #4299e1; color: white; border: none; padding: 16px 20px; font-size: 16px; font-weight: 700; border-radius: 16px; cursor: pointer; transition: all 0.2s; min-height: 54px; margin-top: 24px; }
+
+        .cta-primary { display: block; width: 100%; background: #4299e1; color: white; border: none; padding: 16px 20px; font-size: 16px; font-weight: 700; border-radius: 16px; cursor: pointer; transition: all 0.2s; min-height: 54px; margin: 24px 20px 0 20px; }
         .cta-primary:active { transform: scale(0.98); background: #3182ce; }
+
+        .objection-breakup { background: #f0f4ff; padding: 40px 20px; }
+        .objection-breakup-title { font-size: 24px; font-weight: 700; margin-bottom: 20px; color: #1a202c; }
+        .objection-item { background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; border-left: 4px solid #4299e1; }
+        .objection-item strong { color: #2d3748; }
+        .objection-item p { font-size: 15px; color: #4a5568; line-height: 1.7; }
+
+        .social-proof { background: #ffffff; padding: 40px 20px; }
+        .social-proof-title { font-size: 24px; font-weight: 700; margin-bottom: 30px; color: #1a202c; text-align: center; }
+        .stats-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 40px; }
+        .stat-card { text-align: center; padding: 20px; background: #f7fafc; border-radius: 12px; }
+        .stat-number { font-size: 32px; font-weight: 800; color: #4299e1; margin-bottom: 8px; }
+        .stat-label { font-size: 14px; color: #4a5568; font-weight: 500; }
+
         .offers-section { background: #f9fafb; padding: 48px 20px; }
         .offers-title { font-size: 28px; font-weight: 700; margin-bottom: 40px; color: #1a202c; text-align: center; }
         .offers-container { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 40px; }
@@ -59,12 +61,24 @@
         .cta-offer-premium:active { background: #ffed4e; }
         .offer-guarantee { font-size: 12px; color: #718096; text-align: center; }
         .trust-badge-center { background: #f0f4ff; border-radius: 12px; padding: 16px; font-size: 13px; color: #4a5568; text-align: center; display: flex; align-items: center; justify-content: center; gap: 8px; }
+
+        .faq-section { background: #ffffff; padding: 40px 20px; }
+        .faq-title { font-size: 24px; font-weight: 700; margin-bottom: 20px; color: #1a202c; }
+        .faq-item { background: #f7fafc; border-radius: 12px; margin-bottom: 12px; border: 1px solid #e2e8f0; overflow: hidden; }
+        .faq-item[open] { border-color: #4299e1; }
+        .faq-question { cursor: pointer; padding: 16px; font-weight: 600; color: #2d3748; display: flex; justify-content: space-between; align-items: center; user-select: none; }
+        .faq-question::after { content: '+'; font-size: 20px; font-weight: 300; transition: transform 0.3s; }
+        .faq-item[open] .faq-question::after { transform: rotate(45deg); }
+        .faq-item[open] .faq-question { color: #4299e1; }
+        .faq-answer { padding: 0 16px 16px 16px; font-size: 14px; color: #4a5568; line-height: 1.7; margin: 0; }
+        .faq-answer strong { color: #2d3748; }
+
         @media (max-width: 768px) {
             .headline { font-size: 28px; }
-            .objection-title { font-size: 20px; }
             .offers-container { grid-template-columns: 1fr; }
             .offer-card { padding: 24px 16px; }
             .offer-price { font-size: 28px; }
+            .stats-container { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -80,103 +94,134 @@
         <div style="display: block; margin: 0 auto; width: 100%;"><vturb-smartplayer id="ab-6a7a8290c6d51464834e409c" style="display: block; margin: 0 auto; width: 100%;"></vturb-smartplayer></div>
     </section>
 
-    <div class="reveal-section" id="objectionSection">
-        <!-- FAQ COM ACCORDION -->
-        <section class="objection-section">
-            <h2 class="objection-title">Suas dúvidas respondidas</h2>
+    <button class="cta-primary" onclick="document.getElementById('objection-breakup-section').scrollIntoView({behavior: 'smooth'});">Descobrir a Solução ↓</button>
 
-            <details class="faq-item">
-                <summary class="faq-question">Posso cancelar quando quiser?</summary>
-                <p class="faq-answer">Sim. Não há contrato ou compromisso. Se comprar o plano Basic ou Premium, o acesso é seu para sempre. Sem taxa de cancelamento, sem burocracia.</p>
-            </details>
+    <!-- QUEBRA DE OBJEÇÃO -->
+    <section class="objection-breakup" id="objection-breakup-section">
+        <h2 class="objection-breakup-title">Por que funciona?</h2>
 
-            <details class="faq-item">
-                <summary class="faq-question">Quanto tempo leva pra ver resultado?</summary>
-                <p class="faq-answer">O vídeo tem 2 minutos. Muitas pessoas sentem o efeito na primeira sessão. Mas recomendamos usar por 30 dias para consolidar o hábito e ver os melhores resultados.</p>
-            </details>
+        <div class="objection-item">
+            <strong>✓ Baseado em neurociência comprovada</strong>
+            <p>O protocolo usa técnicas reconhecidas pela ciência para ativar o sistema nervoso parasimpático — a resposta natural de calma do seu corpo.</p>
+        </div>
 
-            <details class="faq-item">
-                <summary class="faq-question">Precisa de algo especial pra funcionar?</summary>
-                <p class="faq-answer">Não. Funciona em qualquer dispositivo (celular, tablet, computador). Em casa, na escola, no trabalho. Você só precisa de 2 minutos e um lugar tranquilo.</p>
-            </details>
+        <div class="objection-item">
+            <strong>✓ Garantia 100% de reembolso</strong>
+            <p>Se não notar diferença em 30 dias, devolvemos cada centavo. Sem perguntas. Sem burocracia. Você não tem nada a perder.</p>
+        </div>
 
-            <details class="faq-item">
-                <summary class="faq-question">Funciona pra todas as idades?</summary>
-                <p class="faq-answer">O protocolo foi desenvolvido para maiores de 12 anos. Para crianças menores, recomendamos supervisão de um adulto.</p>
-            </details>
+        <div class="objection-item">
+            <strong>✓ Funciona em qualquer lugar</strong>
+            <p>Não precisa de equipamentos. Funciona em casa, no trabalho, na escola. Tudo que você precisa é um celular e 2 minutos.</p>
+        </div>
+    </section>
 
-            <details class="faq-item">
-                <summary class="faq-question">Como recebo o acesso?</summary>
-                <p class="faq-answer">Imediatamente após confirmar o pagamento. Você recebe um link por email. Se comprar o Premium, o kit sensorial é enviado por correio em 3-5 dias úteis.</p>
-            </details>
+    <!-- PROVA SOCIAL -->
+    <section class="social-proof">
+        <h2 class="social-proof-title">Resultado que funciona</h2>
 
-            <details class="faq-item">
-                <summary class="faq-question">E se não funcionar comigo?</summary>
-                <p class="faq-answer">Oferecemos garantia de 30 dias. Se não notar diferença, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia.</p>
-            </details>
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-number">2.847+</div>
+                <div class="stat-label">Pessoas já usando</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">92%</div>
+                <div class="stat-label">Taxa de satisfação</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">30</div>
+                <div class="stat-label">Dias para garantia</div>
+            </div>
+        </div>
+    </section>
 
-            <details class="faq-item">
-                <summary class="faq-question">Qual a diferença entre os planos?</summary>
-                <p class="faq-answer"><strong>Basic (R$ 79):</strong> Acesso ao vídeo + guia em PDF.<br><strong>Premium (R$ 129):</strong> Tudo do Basic + kit sensorial físico + consultoria 1-on-1 + comunidade exclusiva.</p>
-            </details>
-        </section>
+    <!-- OFERTAS -->
+    <section class="offers-section">
+        <h2 class="offers-title">Escolha seu plano</h2>
 
-        <!-- OFERTAS -->
-        <section class="offers-section">
-            <h2 class="offers-title">Escolha seu plano</h2>
+        <div class="offers-container">
+            <!-- BASIC -->
+            <div class="offer-card">
+                <div class="offer-name">Plano Basic</div>
+                <div class="offer-price">R$ 79</div>
+                <div class="offer-tagline">Acesso imediato ao protocolo</div>
 
-            <div class="offers-container">
-                <!-- BASIC -->
-                <div class="offer-card">
-                    <div class="offer-name">Plano Basic</div>
-                    <div class="offer-price">R$ 79</div>
-                    <div class="offer-tagline">Acesso imediato ao protocolo</div>
+                <ul class="offer-features">
+                    <li>✓ Vídeo do protocolo (2 min) em HD</li>
+                    <li>✓ Guia em PDF com passo a passo</li>
+                    <li>✓ Acesso vitalício</li>
+                    <li>✓ Suporte por email</li>
+                    <li>✓ Atualizações futuras grátis</li>
+                </ul>
 
-                    <ul class="offer-features">
-                        <li>✓ Vídeo do protocolo (2 min) em HD</li>
-                        <li>✓ Guia em PDF com passo a passo</li>
-                        <li>✓ Acesso vitalício</li>
-                        <li>✓ Suporte por email</li>
-                        <li>✓ Atualizações futuras grátis</li>
-                    </ul>
-
-                    <button class="cta-offer" onclick="window.location.href='https://checkout.example.com/basic'">Começar com Basic →</button>
-                    <div class="offer-guarantee">30 dias de garantia</div>
-                </div>
-
-                <!-- PREMIUM -->
-                <div class="offer-card offer-featured">
-                    <div class="offer-badge">MAIS PEDIDO</div>
-                    <div class="offer-name">Plano Premium</div>
-                    <div class="offer-price">R$ 129</div>
-                    <div class="offer-tagline">Protocolo completo + kit sensorial</div>
-
-                    <ul class="offer-features">
-                        <li>✓ Tudo do plano Basic</li>
-                        <li>✓ <strong>Kit sensorial físico</strong> (entregue em sua casa)</li>
-                        <li>✓ Vídeo bônus: como usar o kit</li>
-                        <li>✓ Comunidade exclusiva no Whatsapp</li>
-                        <li>✓ Consultoria 1-on-1 (30 min)</li>
-                    </ul>
-
-                    <button class="cta-offer cta-offer-premium" onclick="window.location.href='https://checkout.example.com/premium'">Levar Premium →</button>
-                    <div class="offer-guarantee">30 dias de garantia</div>
-                </div>
+                <button class="cta-offer" onclick="window.location.href='https://checkout.example.com/basic'">Começar com Basic →</button>
+                <div class="offer-guarantee">30 dias de garantia</div>
             </div>
 
-            <div class="trust-badge-center"><span>🛡️</span><span>Se não funcionar, devolvemos 100% em 30 dias</span></div>
-        </section>
-    </div>
+            <!-- PREMIUM -->
+            <div class="offer-card offer-featured">
+                <div class="offer-badge">MAIS PEDIDO</div>
+                <div class="offer-name">Plano Premium</div>
+                <div class="offer-price">R$ 129</div>
+                <div class="offer-tagline">Protocolo completo + kit sensorial</div>
 
-    <script type="text/javascript">
-        // Reveal objeções após 5 segundos
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                const objectionSection = document.getElementById('objectionSection');
-                objectionSection.classList.add('visible');
-            }, 5000);
-        });
-    </script>
+                <ul class="offer-features">
+                    <li>✓ Tudo do plano Basic</li>
+                    <li>✓ <strong>Kit sensorial físico</strong> (entregue em sua casa)</li>
+                    <li>✓ Vídeo bônus: como usar o kit</li>
+                    <li>✓ Comunidade exclusiva no Whatsapp</li>
+                    <li>✓ Consultoria 1-on-1 (30 min)</li>
+                </ul>
+
+                <button class="cta-offer cta-offer-premium" onclick="window.location.href='https://checkout.example.com/premium'">Levar Premium →</button>
+                <div class="offer-guarantee">30 dias de garantia</div>
+            </div>
+        </div>
+
+        <div class="trust-badge-center"><span>🛡️</span><span>Se não funcionar, devolvemos 100% em 30 dias</span></div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <h2 class="faq-title">Suas dúvidas respondidas</h2>
+
+        <details class="faq-item">
+            <summary class="faq-question">Posso cancelar quando quiser?</summary>
+            <p class="faq-answer">Sim. Não há contrato ou compromisso. Se comprar o plano Basic ou Premium, o acesso é seu para sempre. Sem taxa de cancelamento, sem burocracia.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">Quanto tempo leva pra ver resultado?</summary>
+            <p class="faq-answer">O vídeo tem 2 minutos. Muitas pessoas sentem o efeito na primeira sessão. Mas recomendamos usar por 30 dias para consolidar o hábito e ver os melhores resultados.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">Precisa de algo especial pra funcionar?</summary>
+            <p class="faq-answer">Não. Funciona em qualquer dispositivo (celular, tablet, computador). Em casa, na escola, no trabalho. Você só precisa de 2 minutos e um lugar tranquilo.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">Funciona pra todas as idades?</summary>
+            <p class="faq-answer">O protocolo foi desenvolvido para maiores de 12 anos. Para crianças menores, recomendamos supervisão de um adulto.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">Como recebo o acesso?</summary>
+            <p class="faq-answer">Imediatamente após confirmar o pagamento. Você recebe um link por email. Se comprar o Premium, o kit sensorial é enviado por correio em 3-5 dias úteis.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">E se não funcionar comigo?</summary>
+            <p class="faq-answer">Oferecemos garantia de 30 dias. Se não notar diferença, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">Qual a diferença entre os planos?</summary>
+            <p class="faq-answer"><strong>Basic (R$ 79):</strong> Acesso ao vídeo + guia em PDF.<br><strong>Premium (R$ 129):</strong> Tudo do Basic + kit sensorial físico + consultoria 1-on-1 + comunidade exclusiva.</p>
+        </details>
+    </section>
+
     <script type="text/javascript">
         var s=document.createElement("script");
         s.src="https://scripts.converteai.net/1ba5e7b3-3e9c-4b69-aaa3-afa3519d2a24/ab-test/6a7a8290c6d51464834e409c/player.js";
