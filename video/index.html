@@ -94,7 +94,10 @@
         <div style="display: block; margin: 0 auto; width: 100%;"><vturb-smartplayer id="ab-6a7a8290c6d51464834e409c" style="display: block; margin: 0 auto; width: 100%;"></vturb-smartplayer></div>
     </section>
 
-    <button class="cta-primary" onclick="document.getElementById('objection-breakup-section').scrollIntoView({behavior: 'smooth'});">Descobrir a Solução ↓</button>
+    <button class="cta-primary" onclick="document.getElementById('below-fold-content').style.display='block'; document.getElementById('below-fold-content').scrollIntoView({behavior: 'smooth'});">Descobrir a Solução ↓</button>
+
+    <!-- CONTEÚDO OCULTO ATÉ CLICAR -->
+    <div id="below-fold-content" style="display: none;">
 
     <!-- QUEBRA DE OBJEÇÃO -->
     <section class="objection-breakup" id="objection-breakup-section">
@@ -221,6 +224,8 @@
             <p class="faq-answer"><strong>Basic (R$ 79):</strong> Acesso ao vídeo + guia em PDF.<br><strong>Premium (R$ 129):</strong> Tudo do Basic + kit sensorial físico + consultoria 1-on-1 + comunidade exclusiva.</p>
         </details>
     </section>
+
+    </div><!-- FIM DO BELOW-FOLD-CONTENT -->
 
     <script type="text/javascript">
         var s=document.createElement("script");
