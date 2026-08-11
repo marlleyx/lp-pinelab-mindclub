@@ -1,0 +1,2 @@
+# Redirect root to pinelab.com.br
+/  https://pinelab.com.br/  301
