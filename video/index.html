@@ -35,7 +35,32 @@
         .objection-item p { font-size: 14px; color: #4a5568; line-height: 1.6; }
         .cta-primary { display: block; width: 100%; background: #4299e1; color: white; border: none; padding: 16px 20px; font-size: 16px; font-weight: 700; border-radius: 16px; cursor: pointer; transition: all 0.2s; min-height: 54px; margin-top: 24px; }
         .cta-primary:active { transform: scale(0.98); background: #3182ce; }
-        @media (max-width: 768px) { .headline { font-size: 28px; } .objection-title { font-size: 20px; } }
+        .offers-section { background: #f9fafb; padding: 48px 20px; }
+        .offers-title { font-size: 28px; font-weight: 700; margin-bottom: 40px; color: #1a202c; text-align: center; }
+        .offers-container { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 40px; }
+        .offer-card { background: white; border: 2px solid #e2e8f0; border-radius: 16px; padding: 32px 24px; position: relative; transition: all 0.3s; }
+        .offer-card:hover { border-color: #4299e1; box-shadow: 0 8px 24px rgba(66, 153, 225, 0.15); }
+        .offer-featured { border-color: #ffd700; box-shadow: 0 8px 24px rgba(255, 215, 0, 0.2); }
+        .offer-badge { position: absolute; top: -12px; left: 24px; background: #ffd700; color: #1a202c; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 700; letter-spacing: 0.5px; }
+        .offer-name { font-size: 20px; font-weight: 700; color: #1a202c; margin-bottom: 8px; }
+        .offer-price { font-size: 36px; font-weight: 800; color: #4299e1; margin-bottom: 4px; }
+        .offer-tagline { font-size: 14px; color: #718096; margin-bottom: 24px; font-weight: 500; }
+        .offer-features { list-style: none; margin-bottom: 24px; }
+        .offer-features li { font-size: 14px; color: #4a5568; line-height: 1.8; margin-bottom: 12px; }
+        .offer-features li strong { color: #1a202c; font-weight: 600; }
+        .cta-offer { display: block; width: 100%; background: #4299e1; color: white; border: none; padding: 16px 20px; font-size: 16px; font-weight: 700; border-radius: 16px; cursor: pointer; transition: all 0.2s; min-height: 54px; margin-bottom: 16px; }
+        .cta-offer:active { transform: scale(0.98); background: #3182ce; }
+        .cta-offer-premium { background: #ffd700; color: #1a202c; }
+        .cta-offer-premium:active { background: #ffed4e; }
+        .offer-guarantee { font-size: 12px; color: #718096; text-align: center; }
+        .trust-badge-center { background: #f0f4ff; border-radius: 12px; padding: 16px; font-size: 13px; color: #4a5568; text-align: center; display: flex; align-items: center; justify-content: center; gap: 8px; }
+        @media (max-width: 768px) {
+            .headline { font-size: 28px; }
+            .objection-title { font-size: 20px; }
+            .offers-container { grid-template-columns: 1fr; }
+            .offer-card { padding: 24px 16px; }
+            .offer-price { font-size: 28px; }
+        }
     </style>
 </head>
 <body>
@@ -51,22 +76,67 @@
     </section>
 
     <div class="reveal-section" id="objectionSection">
+        <!-- OBJEÇÕES RÁPIDAS -->
         <section class="objection-section">
             <h2 class="objection-title">Tudo bem se você ainda tiver dúvidas...</h2>
             <div class="objection-item">
-                <strong>Mas isso realmente funciona?</strong>
-                <p>Sim. Centenas de pessoas já comprovaram. A técnica que você vai aprender vem da neurociência moderna.</p>
+                <strong>Precisa de algo especial pra funcionar?</strong>
+                <p>Não. Funciona em qualquer dispositivo. Em casa, na escola, no trabalho. Você só precisa de 2 minutos.</p>
             </div>
             <div class="objection-item">
                 <strong>E se não funcionar comigo?</strong>
-                <p>Se em 30 dias você não ver resultados, devolvemos cada centavo. Sem perguntas. Sem burocracia.</p>
+                <p>Testamos com centenas de pessoas. Se em 30 dias você não notar a diferença, devolvemos tudo. Sem perguntas.</p>
             </div>
             <div class="objection-item">
-                <strong>Por quanto sai?</strong>
-                <p>Plano Basic: R$ 79 (acesso ao vídeo + e-book). Plano Premium: R$ 129 (inclui kit com objetos sensoriais).</p>
+                <strong>Qual a diferença entre os planos?</strong>
+                <p>Basic: acesso ao protocolo + guia em PDF. Premium: tudo isso + kit sensorial físico (usa junto com o vídeo para potencializar).</p>
             </div>
-            <button class="cta-primary" onclick="window.location.href='#checkout'">Quero Garantir Minha Solução →</button>
-            <div class="trust-badge" style="margin-top: 24px; justify-content: center;"><span>🛡️</span><span>30 dias de garantia • Sem burocracia</span></div>
+        </section>
+
+        <!-- OFERTAS -->
+        <section class="offers-section">
+            <h2 class="offers-title">Escolha seu plano</h2>
+
+            <div class="offers-container">
+                <!-- BASIC -->
+                <div class="offer-card">
+                    <div class="offer-name">Plano Basic</div>
+                    <div class="offer-price">R$ 79</div>
+                    <div class="offer-tagline">Acesso imediato ao protocolo</div>
+
+                    <ul class="offer-features">
+                        <li>✓ Vídeo do protocolo (2 min) em HD</li>
+                        <li>✓ Guia em PDF com passo a passo</li>
+                        <li>✓ Acesso vitalício</li>
+                        <li>✓ Suporte por email</li>
+                        <li>✓ Atualizações futuras grátis</li>
+                    </ul>
+
+                    <button class="cta-offer" onclick="window.location.href='https://checkout.example.com/basic'">Começar com Basic →</button>
+                    <div class="offer-guarantee">30 dias de garantia</div>
+                </div>
+
+                <!-- PREMIUM -->
+                <div class="offer-card offer-featured">
+                    <div class="offer-badge">MAIS PEDIDO</div>
+                    <div class="offer-name">Plano Premium</div>
+                    <div class="offer-price">R$ 129</div>
+                    <div class="offer-tagline">Protocolo completo + kit sensorial</div>
+
+                    <ul class="offer-features">
+                        <li>✓ Tudo do plano Basic</li>
+                        <li>✓ <strong>Kit sensorial físico</strong> (entregue em sua casa)</li>
+                        <li>✓ Vídeo bônus: como usar o kit</li>
+                        <li>✓ Comunidade exclusiva no Whatsapp</li>
+                        <li>✓ Consultoria 1-on-1 (30 min)</li>
+                    </ul>
+
+                    <button class="cta-offer cta-offer-premium" onclick="window.location.href='https://checkout.example.com/premium'">Levar Premium →</button>
+                    <div class="offer-guarantee">30 dias de garantia</div>
+                </div>
+            </div>
+
+            <div class="trust-badge-center"><span>🛡️</span><span>Se não funcionar, devolvemos 100% em 30 dias</span></div>
         </section>
     </div>
 
