@@ -30,9 +30,14 @@
         .reveal-section.visible { display: block; opacity: 1; pointer-events: auto; }
         .objection-section { background: #ffffff; padding: 40px 20px; }
         .objection-title { font-size: 24px; font-weight: 700; margin-bottom: 20px; color: #1a202c; }
-        .objection-item { background: #f7fafc; border-radius: 12px; padding: 16px; margin-bottom: 12px; border-left: 4px solid #4299e1; }
-        .objection-item strong { color: #2d3748; display: block; margin-bottom: 8px; }
-        .objection-item p { font-size: 14px; color: #4a5568; line-height: 1.6; }
+        .faq-item { background: #f7fafc; border-radius: 12px; margin-bottom: 12px; border: 1px solid #e2e8f0; overflow: hidden; }
+        .faq-item[open] { border-color: #4299e1; }
+        .faq-question { cursor: pointer; padding: 16px; font-weight: 600; color: #2d3748; display: flex; justify-content: space-between; align-items: center; user-select: none; }
+        .faq-question::after { content: '+'; font-size: 20px; font-weight: 300; transition: transform 0.3s; }
+        .faq-item[open] .faq-question::after { transform: rotate(45deg); }
+        .faq-item[open] .faq-question { color: #4299e1; }
+        .faq-answer { padding: 0 16px 16px 16px; font-size: 14px; color: #4a5568; line-height: 1.7; margin: 0; }
+        .faq-answer strong { color: #2d3748; }
         .cta-primary { display: block; width: 100%; background: #4299e1; color: white; border: none; padding: 16px 20px; font-size: 16px; font-weight: 700; border-radius: 16px; cursor: pointer; transition: all 0.2s; min-height: 54px; margin-top: 24px; }
         .cta-primary:active { transform: scale(0.98); background: #3182ce; }
         .offers-section { background: #f9fafb; padding: 48px 20px; }
@@ -76,21 +81,44 @@
     </section>
 
     <div class="reveal-section" id="objectionSection">
-        <!-- OBJEÇÕES RÁPIDAS -->
+        <!-- FAQ COM ACCORDION -->
         <section class="objection-section">
             <h2 class="objection-title">Suas dúvidas respondidas</h2>
-            <div class="objection-item">
-                <strong>Precisa de algo especial pra funcionar?</strong>
-                <p>Não. Funciona em qualquer dispositivo. Em casa, na escola, no trabalho. Você só precisa de 2 minutos.</p>
-            </div>
-            <div class="objection-item">
-                <strong>E se não funcionar comigo?</strong>
-                <p>Testamos com centenas de pessoas. Se em 30 dias você não notar a diferença, devolvemos tudo. Sem perguntas.</p>
-            </div>
-            <div class="objection-item">
-                <strong>Qual a diferença entre os planos?</strong>
-                <p>Basic: acesso ao protocolo + guia em PDF. Premium: tudo isso + kit sensorial físico (usa junto com o vídeo para potencializar).</p>
-            </div>
+
+            <details class="faq-item">
+                <summary class="faq-question">Posso cancelar quando quiser?</summary>
+                <p class="faq-answer">Sim. Não há contrato ou compromisso. Se comprar o plano Basic ou Premium, o acesso é seu para sempre. Sem taxa de cancelamento, sem burocracia.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-question">Quanto tempo leva pra ver resultado?</summary>
+                <p class="faq-answer">O vídeo tem 2 minutos. Muitas pessoas sentem o efeito na primeira sessão. Mas recomendamos usar por 30 dias para consolidar o hábito e ver os melhores resultados.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-question">Precisa de algo especial pra funcionar?</summary>
+                <p class="faq-answer">Não. Funciona em qualquer dispositivo (celular, tablet, computador). Em casa, na escola, no trabalho. Você só precisa de 2 minutos e um lugar tranquilo.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-question">Funciona pra todas as idades?</summary>
+                <p class="faq-answer">O protocolo foi desenvolvido para maiores de 12 anos. Para crianças menores, recomendamos supervisão de um adulto.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-question">Como recebo o acesso?</summary>
+                <p class="faq-answer">Imediatamente após confirmar o pagamento. Você recebe um link por email. Se comprar o Premium, o kit sensorial é enviado por correio em 3-5 dias úteis.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-question">E se não funcionar comigo?</summary>
+                <p class="faq-answer">Oferecemos garantia de 30 dias. Se não notar diferença, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-question">Qual a diferença entre os planos?</summary>
+                <p class="faq-answer"><strong>Basic (R$ 79):</strong> Acesso ao vídeo + guia em PDF.<br><strong>Premium (R$ 129):</strong> Tudo do Basic + kit sensorial físico + consultoria 1-on-1 + comunidade exclusiva.</p>
+            </details>
         </section>
 
         <!-- OFERTAS -->
