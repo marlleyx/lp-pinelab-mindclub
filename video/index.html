@@ -49,20 +49,23 @@
         .complementary-title { font-size: 28px; font-weight: 700; margin-bottom: 20px; color: #1a202c; }
         .complementary-text { font-size: 16px; color: #4a5568; max-width: 600px; margin: 0 auto; line-height: 1.8; }
 
-        .offers-section { background: #f9fafb; padding: 48px 20px; }
+        .offers-section { background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 100%); padding: 48px 20px; }
         .offers-title { font-size: 28px; font-weight: 700; margin-bottom: 40px; color: #1a202c; text-align: center; }
-        .single-offer { background: white; border: 3px solid #4299e1; border-radius: 20px; padding: 40px 24px; max-width: 600px; margin: 0 auto 40px auto; text-align: center; box-shadow: 0 8px 32px rgba(66, 153, 225, 0.15); }
-        .offer-name { font-size: 24px; font-weight: 700; color: #1a202c; margin-bottom: 12px; }
-        .offer-price { font-size: 48px; font-weight: 800; color: #4299e1; margin-bottom: 4px; }
-        .price-period { font-size: 20px; font-weight: 600; }
-        .offer-tagline { font-size: 16px; color: #4a5568; margin-bottom: 32px; font-weight: 500; line-height: 1.6; }
-        .offer-features { list-style: none; margin-bottom: 32px; text-align: left; }
-        .offer-features li { font-size: 15px; color: #4a5568; line-height: 1.8; margin-bottom: 14px; }
+        .single-offer { background: white; border: none; border-radius: 24px; padding: 48px 32px; max-width: 600px; margin: 0 auto 40px auto; text-align: center; box-shadow: 0 12px 48px rgba(66, 153, 225, 0.12); transition: transform 0.3s, box-shadow 0.3s; }
+        .single-offer:hover { transform: translateY(-4px); box-shadow: 0 16px 56px rgba(66, 153, 225, 0.16); }
+        .offer-name { font-size: 26px; font-weight: 700; color: #1a202c; margin-bottom: 16px; background: linear-gradient(135deg, #4299e1, #2c5282); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .offer-price { font-size: 56px; font-weight: 800; color: #4299e1; margin-bottom: 2px; line-height: 1; }
+        .price-period { font-size: 18px; font-weight: 600; color: #4299e1; }
+        .offer-tagline { font-size: 15px; color: #4a5568; margin-bottom: 36px; font-weight: 500; line-height: 1.7; }
+        .offer-features { list-style: none; margin-bottom: 36px; text-align: left; display: flex; flex-direction: column; gap: 16px; }
+        .offer-features li { font-size: 16px; color: #2d3748; line-height: 1.6; font-weight: 500; display: flex; align-items: flex-start; gap: 12px; }
+        .offer-features li::before { content: '✓'; color: #4299e1; font-weight: 800; font-size: 20px; flex-shrink: 0; margin-top: -2px; }
         .offer-features li strong { color: #1a202c; font-weight: 700; }
-        .cta-offer { display: block; width: calc(100% - 40px); background: #4299e1; color: white; border: none; padding: 18px 20px; font-size: 17px; font-weight: 700; border-radius: 16px; cursor: pointer; transition: all 0.2s; min-height: 56px; margin: 0 auto 20px auto; }
-        .cta-offer:active { transform: scale(0.98); background: #3182ce; }
-        .cta-offer-single { background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%); font-size: 18px; }
-        .cta-offer-single:active { transform: scale(0.98); }
+        .cta-offer { display: block; width: calc(100% - 40px); background: #4299e1; color: white; border: none; padding: 18px 20px; font-size: 17px; font-weight: 700; border-radius: 16px; cursor: pointer; transition: all 0.3s ease; min-height: 56px; margin: 0 auto 20px auto; }
+        .cta-offer:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(66, 153, 225, 0.3); }
+        .cta-offer:active { transform: scale(0.98); }
+        .cta-offer-single { background: linear-gradient(135deg, #4299e1 0%, #2c5282 100%); font-size: 18px; padding: 20px 20px; min-height: 60px; font-weight: 800; letter-spacing: 0.5px; box-shadow: 0 8px 24px rgba(66, 153, 225, 0.25); }
+        .cta-offer-single:hover { box-shadow: 0 12px 36px rgba(66, 153, 225, 0.35); transform: translateY(-3px); }
         .offer-guarantee { font-size: 13px; color: #718096; text-align: center; font-weight: 500; }
         .trust-badge-center { background: #f0f4ff; border-radius: 12px; padding: 16px; font-size: 13px; color: #4a5568; text-align: center; display: flex; align-items: center; justify-content: center; gap: 8px; }
 
