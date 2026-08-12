@@ -111,7 +111,7 @@
         <div style="display: block; margin: 0 auto; width: 100%;"><vturb-smartplayer id="ab-6a7a8290c6d51464834e409c" style="display: block; margin: 0 auto; width: 100%;"></vturb-smartplayer></div>
     </section>
 
-    <button class="cta-primary" onclick="document.getElementById('below-fold-content').style.display='block'; document.getElementById('below-fold-content').scrollIntoView({behavior: 'smooth'});">Descobrir a Solução ↓</button>
+    <button class="cta-primary" id="reveal-btn">Descobrir a Solução ↓</button>
 
     <!-- CONTEÚDO OCULTO ATÉ CLICAR -->
     <div id="below-fold-content" style="display: none;">
@@ -253,15 +253,15 @@
             }, 6000);
         });
 
-        // Clicar no botão mostra o conteúdo abaixo
-        document.querySelector('.cta-primary').addEventListener('click', function(e) {
+        // Clicar no botão mostra o conteúdo abaixo e rola até ele
+        document.getElementById('reveal-btn').addEventListener('click', function(e) {
             e.preventDefault();
             const content = document.getElementById('below-fold-content');
             if (content.style.display === 'none') {
                 content.style.display = 'block';
-                setTimeout(() => {
-                    content.scrollIntoView({behavior: 'smooth'});
-                }, 50);
+                requestAnimationFrame(() => {
+                    content.scrollIntoView({behavior: 'smooth', block: 'start'});
+                });
             }
         });
     </script>
