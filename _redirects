@@ -1,5 +1,3 @@
-# Rewrite /video to /video/index.html (keep URL)
-/video* /video/index.html 200
-
-# Catch-all: redirect everything else to pinelab
-/* https://pinelab.com.br/:splat 301
+# Redirect only the exact root to pinelab home
+# Everything else (including /video and /video/) is served as static files
+/ https://pinelab.com.br/ 301
