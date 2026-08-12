@@ -252,6 +252,17 @@
     </div><!-- FIM DO BELOW-FOLD-CONTENT -->
 
     <script type="text/javascript">
+        // Auto-reveal após 6 segundos
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const content = document.getElementById('below-fold-content');
+                content.style.display = 'block';
+                content.scrollIntoView({behavior: 'smooth'});
+            }, 6000);
+        });
+    </script>
+
+    <script type="text/javascript">
         var s=document.createElement("script");
         s.src="https://scripts.converteai.net/1ba5e7b3-3e9c-4b69-aaa3-afa3519d2a24/ab-test/6a7a8290c6d51464834e409c/player.js";
         s.async=!0;
