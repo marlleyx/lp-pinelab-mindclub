@@ -51,22 +51,19 @@
 
         .offers-section { background: #f9fafb; padding: 48px 20px; }
         .offers-title { font-size: 28px; font-weight: 700; margin-bottom: 40px; color: #1a202c; text-align: center; }
-        .offers-container { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 40px; }
-        .offer-card { background: white; border: 2px solid #e2e8f0; border-radius: 16px; padding: 32px 24px; position: relative; transition: all 0.3s; }
-        .offer-card:hover { border-color: #4299e1; box-shadow: 0 8px 24px rgba(66, 153, 225, 0.15); }
-        .offer-featured { border-color: #ffd700; box-shadow: 0 8px 24px rgba(255, 215, 0, 0.2); }
-        .offer-badge { position: absolute; top: -12px; left: 24px; background: #ffd700; color: #1a202c; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 700; letter-spacing: 0.5px; }
-        .offer-name { font-size: 20px; font-weight: 700; color: #1a202c; margin-bottom: 8px; }
-        .offer-price { font-size: 36px; font-weight: 800; color: #4299e1; margin-bottom: 4px; }
-        .offer-tagline { font-size: 14px; color: #718096; margin-bottom: 24px; font-weight: 500; }
-        .offer-features { list-style: none; margin-bottom: 24px; }
-        .offer-features li { font-size: 14px; color: #4a5568; line-height: 1.8; margin-bottom: 12px; }
-        .offer-features li strong { color: #1a202c; font-weight: 600; }
-        .cta-offer { display: block; width: 100%; background: #4299e1; color: white; border: none; padding: 16px 20px; font-size: 16px; font-weight: 700; border-radius: 16px; cursor: pointer; transition: all 0.2s; min-height: 54px; margin-bottom: 16px; }
+        .single-offer { background: white; border: 3px solid #4299e1; border-radius: 20px; padding: 40px 24px; max-width: 600px; margin: 0 auto 40px auto; text-align: center; box-shadow: 0 8px 32px rgba(66, 153, 225, 0.15); }
+        .offer-name { font-size: 24px; font-weight: 700; color: #1a202c; margin-bottom: 12px; }
+        .offer-price { font-size: 48px; font-weight: 800; color: #4299e1; margin-bottom: 4px; }
+        .price-period { font-size: 20px; font-weight: 600; }
+        .offer-tagline { font-size: 16px; color: #4a5568; margin-bottom: 32px; font-weight: 500; line-height: 1.6; }
+        .offer-features { list-style: none; margin-bottom: 32px; text-align: left; }
+        .offer-features li { font-size: 15px; color: #4a5568; line-height: 1.8; margin-bottom: 14px; }
+        .offer-features li strong { color: #1a202c; font-weight: 700; }
+        .cta-offer { display: block; width: calc(100% - 40px); background: #4299e1; color: white; border: none; padding: 18px 20px; font-size: 17px; font-weight: 700; border-radius: 16px; cursor: pointer; transition: all 0.2s; min-height: 56px; margin: 0 auto 20px auto; }
         .cta-offer:active { transform: scale(0.98); background: #3182ce; }
-        .cta-offer-premium { background: #ffd700; color: #1a202c; }
-        .cta-offer-premium:active { background: #ffed4e; }
-        .offer-guarantee { font-size: 12px; color: #718096; text-align: center; }
+        .cta-offer-single { background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%); font-size: 18px; }
+        .cta-offer-single:active { transform: scale(0.98); }
+        .offer-guarantee { font-size: 13px; color: #718096; text-align: center; font-weight: 500; }
         .trust-badge-center { background: #f0f4ff; border-radius: 12px; padding: 16px; font-size: 13px; color: #4a5568; text-align: center; display: flex; align-items: center; justify-content: center; gap: 8px; }
 
         .faq-section { background: #ffffff; padding: 40px 20px; }
@@ -163,50 +160,28 @@
         <p class="complementary-text">Adicione aqui uma seção complementar: depoimentos, timeline, garantia visual, ou outro conteúdo que queira destacar. Você vai detalhar depois.</p>
     </section>
 
-    <!-- OFERTAS -->
+    <!-- PLANO ÚNICO -->
     <section class="offers-section">
-        <h2 class="offers-title">Escolha seu plano</h2>
+        <h2 class="offers-title">Comece agora</h2>
 
-        <div class="offers-container">
-            <!-- BASIC -->
-            <div class="offer-card">
-                <div class="offer-name">Plano Basic</div>
-                <div class="offer-price">R$ 79</div>
-                <div class="offer-tagline">Acesso imediato ao protocolo</div>
+        <div class="single-offer">
+            <div class="offer-name">MindClub + Kit Sensorial</div>
+            <div class="offer-price">R$ 99<span class="price-period">/mês</span></div>
+            <div class="offer-tagline">Protocolo em vídeo + 2 itens sensoriais surpresa + bônus, entregues todo mês na sua porta</div>
 
-                <ul class="offer-features">
-                    <li>✓ Vídeo do protocolo (2 min) em HD</li>
-                    <li>✓ Guia em PDF com passo a passo</li>
-                    <li>✓ Acesso vitalício</li>
-                    <li>✓ Suporte por email</li>
-                    <li>✓ Atualizações futuras grátis</li>
-                </ul>
+            <ul class="offer-features">
+                <li>✓ Protocolo em vídeo (2 min) - acesso imediato</li>
+                <li>✓ <strong>2 itens sensoriais surpresa</strong> todo mês</li>
+                <li>✓ <strong>1 bônus especial</strong> a cada entrega</li>
+                <li>✓ Entrega mensal na sua porta</li>
+                <li>✓ Acesso à comunidade exclusiva</li>
+            </ul>
 
-                <button class="cta-offer" onclick="window.location.href='https://checkout.example.com/basic'">Começar com Basic →</button>
-                <div class="offer-guarantee">30 dias de garantia</div>
-            </div>
-
-            <!-- PREMIUM -->
-            <div class="offer-card offer-featured">
-                <div class="offer-badge">MAIS PEDIDO</div>
-                <div class="offer-name">Plano Premium</div>
-                <div class="offer-price">R$ 129</div>
-                <div class="offer-tagline">Protocolo completo + kit sensorial</div>
-
-                <ul class="offer-features">
-                    <li>✓ Tudo do plano Basic</li>
-                    <li>✓ <strong>Kit sensorial físico</strong> (entregue em sua casa)</li>
-                    <li>✓ Vídeo bônus: como usar o kit</li>
-                    <li>✓ Comunidade exclusiva no Whatsapp</li>
-                    <li>✓ Consultoria 1-on-1 (30 min)</li>
-                </ul>
-
-                <button class="cta-offer cta-offer-premium" onclick="window.location.href='https://checkout.example.com/premium'">Levar Premium →</button>
-                <div class="offer-guarantee">30 dias de garantia</div>
-            </div>
+            <button class="cta-offer cta-offer-single" onclick="window.location.href='https://checkout.example.com/subscription'">Assinar agora por R$ 99/mês →</button>
+            <div class="offer-guarantee">30 dias de garantia • Cancele quando quiser</div>
         </div>
 
-        <div class="trust-badge-center"><span>🛡️</span><span>Se não funcionar, devolvemos 100% em 30 dias</span></div>
+        <div class="trust-badge-center"><span>🛡️</span><span>Se não gostar, devolvemos 100% em 30 dias</span></div>
     </section>
 
     <!-- FAQ -->
