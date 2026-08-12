@@ -66,7 +66,8 @@
         .offer-features { list-style: none; margin-bottom: 36px; text-align: left; display: flex; flex-direction: column; gap: 12px; position: relative; }
         .offer-features li { font-size: 16px; color: #2d3748; line-height: 1.5; font-weight: 500; display: flex; align-items: center; gap: 14px; background: rgba(67, 97, 238, 0.04); border-radius: 14px; padding: 12px 16px; transition: background 0.2s; }
         .offer-features li:hover { background: rgba(67, 97, 238, 0.08); }
-        .feature-icon { flex-shrink: 0; width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg, #4361ee 0%, #4cc9f0 100%); display: flex; align-items: center; justify-content: center; font-size: 17px; box-shadow: 0 3px 10px rgba(67, 97, 238, 0.25); }
+        .feature-icon { flex-shrink: 0; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; color: #4361ee; }
+        .feature-icon svg { width: 100%; height: 100%; }
         .offer-features li strong { color: #1a202c; font-weight: 700; }
         .cta-offer { display: block; width: calc(100% - 40px); background: #4361ee; color: white; border: none; padding: 18px 20px; font-size: 17px; font-weight: 700; border-radius: 16px; cursor: pointer; transition: all 0.3s ease; min-height: 56px; margin: 0 auto 20px auto; }
         .cta-offer:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(67, 97, 238, 0.3); }
@@ -187,17 +188,15 @@
             <div class="offer-tagline">Protocolo em vídeo + 2 itens sensoriais surpresa + bônus, entregues todo mês na sua porta</div>
 
             <ul class="offer-features">
-                <li><span class="feature-icon">🎥</span><span>Protocolo em vídeo (2 min) - acesso imediato</span></li>
-                <li><span class="feature-icon">🎁</span><span><strong>2 itens sensoriais surpresa</strong> todo mês</span></li>
-                <li><span class="feature-icon">✨</span><span><strong>1 bônus especial</strong> a cada entrega</span></li>
-                <li><span class="feature-icon">🚚</span><span>Entrega mensal na sua porta</span></li>
+                <li><span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg></span><span>Protocolo em vídeo (2 min) - acesso imediato</span></li>
+                <li><span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path></svg></span><span><strong>2 itens sensoriais surpresa</strong> todo mês</span></li>
+                <li><span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l1.6 5.3L19 9l-5.4 1.7L12 16l-1.6-5.3L5 9l5.4-1.7L12 2z"></path><path d="M19 15l0.8 2.6L22 18l-2.2 0.9L19 21l-0.8-2.1L16 18l2.2-0.4L19 15z"></path></svg></span><span><strong>1 bônus especial</strong> a cada entrega</span></li>
+                <li><span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg></span><span>Entrega mensal na sua porta</span></li>
             </ul>
 
             <button class="cta-offer cta-offer-single" onclick="window.location.href='https://pineapple.mycartpanda.com/checkout?subscription=2688'">Quero começar →</button>
             <div class="offer-guarantee">🛡️ 30 dias de garantia • Cancele quando quiser</div>
         </div>
-
-        <div class="trust-badge-center"><span>🛡️</span><span>Se não gostar, devolvemos 100% em 30 dias</span></div>
     </section>
 
     <!-- FAQ -->
