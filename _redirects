@@ -2,3 +2,6 @@
 /video /video/index.html 200
 /video/ /video/index.html 200
 /video/* /video/:splat 200
+
+# Redirect root to pinelab
+/ https://pinelab.com.br/ 301
