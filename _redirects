@@ -1,5 +1,5 @@
-# Serve all /video paths
+# Rewrite /video to /video/index.html (keep URL)
 /video* /video/index.html 200
 
-# Redirect root to pinelab
-/ https://pinelab.com.br/ 301
+# Catch-all: redirect everything else to pinelab
+/* https://pinelab.com.br/:splat 301
