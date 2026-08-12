@@ -1,2 +1,7 @@
-# Redirect root to pinelab.com.br
-/  https://pinelab.com.br/  301
+# Keep /video path (both with and without trailing slash)
+/video /video/index.html 200
+/video/ /video/index.html 200
+/video/* /video/:splat 200
+
+# Redirect root and everything else to pinelab
+/* https://pinelab.com.br/:splat 301
