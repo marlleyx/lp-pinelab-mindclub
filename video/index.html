@@ -53,22 +53,27 @@
 
         .offers-section { background: #ffffff; padding: 48px 20px; }
         .offers-title { font-size: 28px; font-weight: 700; margin-bottom: 40px; color: #1a202c; text-align: center; }
-        .single-offer { background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%); border: 1px solid rgba(67, 97, 238, 0.2); border-radius: 24px; padding: 48px 32px; max-width: 600px; margin: 0 auto 40px auto; text-align: center; box-shadow: 0 8px 32px rgba(67, 97, 238, 0.1); transition: transform 0.3s, box-shadow 0.3s; }
+        .single-offer { position: relative; background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%); border: 1px solid rgba(67, 97, 238, 0.2); border-radius: 24px; padding: 48px 32px; max-width: 600px; margin: 0 auto 40px auto; text-align: center; box-shadow: 0 8px 32px rgba(67, 97, 238, 0.1); transition: transform 0.3s, box-shadow 0.3s; overflow: hidden; }
+        .single-offer::before { content: ''; position: absolute; top: -40%; right: -20%; width: 60%; height: 60%; background: radial-gradient(circle, rgba(76, 201, 240, 0.15) 0%, transparent 70%); pointer-events: none; }
         .single-offer:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(67, 97, 238, 0.15); }
-        .offer-product-image { width: calc(100% + 64px); max-width: none; height: auto; margin: -48px -32px 28px -32px; border-radius: 24px 24px 0 0; object-fit: cover; box-shadow: none; display: block; }
+        .offer-image-wrap { position: relative; margin: -48px -32px 28px -32px; }
+        .offer-product-image { width: 100%; height: auto; object-fit: cover; box-shadow: none; display: block; border-radius: 24px 24px 0 0; }
+        .offer-badge { position: absolute; bottom: 14px; left: 14px; background: linear-gradient(135deg, #4361ee 0%, #4cc9f0 100%); color: white; font-size: 13px; font-weight: 700; padding: 8px 16px; border-radius: 100px; box-shadow: 0 4px 14px rgba(67, 97, 238, 0.4); letter-spacing: 0.2px; }
         .offer-name { font-size: 26px; font-weight: 700; color: #1a202c; margin-bottom: 16px; background: linear-gradient(135deg, #4361ee 0%, #4cc9f0 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .offer-price { font-size: 56px; font-weight: 800; color: #4361ee; margin-bottom: 2px; line-height: 1; }
         .price-period { font-size: 18px; font-weight: 600; color: #4361ee; }
-        .offer-tagline { font-size: 15px; color: #4a5568; margin-bottom: 36px; font-weight: 500; line-height: 1.7; }
-        .offer-features { list-style: none; margin-bottom: 36px; text-align: left; display: flex; flex-direction: column; gap: 16px; }
-        .offer-features li { font-size: 16px; color: #2d3748; line-height: 1.6; font-weight: 500; display: flex; align-items: flex-start; gap: 12px; }
-        .offer-features li::before { content: '✓'; color: #4361ee; font-weight: 800; font-size: 20px; flex-shrink: 0; margin-top: -2px; }
+        .offer-tagline { font-size: 15px; color: #4a5568; margin-bottom: 32px; font-weight: 500; line-height: 1.7; }
+        .offer-features { list-style: none; margin-bottom: 36px; text-align: left; display: flex; flex-direction: column; gap: 12px; position: relative; }
+        .offer-features li { font-size: 16px; color: #2d3748; line-height: 1.5; font-weight: 500; display: flex; align-items: center; gap: 14px; background: rgba(67, 97, 238, 0.04); border-radius: 14px; padding: 12px 16px; transition: background 0.2s; }
+        .offer-features li:hover { background: rgba(67, 97, 238, 0.08); }
+        .feature-icon { flex-shrink: 0; width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg, #4361ee 0%, #4cc9f0 100%); display: flex; align-items: center; justify-content: center; font-size: 17px; box-shadow: 0 3px 10px rgba(67, 97, 238, 0.25); }
         .offer-features li strong { color: #1a202c; font-weight: 700; }
         .cta-offer { display: block; width: calc(100% - 40px); background: #4361ee; color: white; border: none; padding: 18px 20px; font-size: 17px; font-weight: 700; border-radius: 16px; cursor: pointer; transition: all 0.3s ease; min-height: 56px; margin: 0 auto 20px auto; }
         .cta-offer:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(67, 97, 238, 0.3); }
         .cta-offer:active { transform: scale(0.98); }
-        .cta-offer-single { background: linear-gradient(135deg, #4361ee 0%, #4cc9f0 100%); font-size: 18px; padding: 20px 20px; min-height: 60px; font-weight: 800; letter-spacing: 0.5px; box-shadow: 0 8px 24px rgba(67, 97, 238, 0.25); }
-        .cta-offer-single:hover { box-shadow: 0 12px 36px rgba(67, 97, 238, 0.35); transform: translateY(-3px); }
+        .cta-offer-single { background: linear-gradient(135deg, #4361ee 0%, #4cc9f0 100%); font-size: 18px; padding: 20px 20px; min-height: 60px; font-weight: 800; letter-spacing: 0.5px; box-shadow: 0 8px 24px rgba(67, 97, 238, 0.25); animation: ctaPulse 2.5s ease-in-out infinite; }
+        .cta-offer-single:hover { box-shadow: 0 12px 36px rgba(67, 97, 238, 0.35); transform: translateY(-3px); animation-play-state: paused; }
+        @keyframes ctaPulse { 0%, 100% { box-shadow: 0 8px 24px rgba(67, 97, 238, 0.25); } 50% { box-shadow: 0 8px 32px rgba(67, 97, 238, 0.45); } }
         .offer-guarantee { font-size: 13px; color: #718096; text-align: center; font-weight: 500; }
         .trust-badge-center { background: transparent; border-radius: 12px; padding: 16px; font-size: 13px; color: #4a5568; text-align: center; display: flex; align-items: center; justify-content: center; gap: 8px; }
 
@@ -173,20 +178,23 @@
         <h2 class="offers-title">Comece agora</h2>
 
         <div class="single-offer">
-            <img src="https://cdn.shopify.com/s/files/1/0722/5029/4358/files/kitalissa.png?v=1785862741" alt="Kit Sensorial MindClub" class="offer-product-image">
+            <div class="offer-image-wrap">
+                <img src="https://cdn.shopify.com/s/files/1/0722/5029/4358/files/kitalissa.png?v=1785862741" alt="Kit Sensorial MindClub" class="offer-product-image">
+                <span class="offer-badge">📦 Assinatura mensal</span>
+            </div>
             <div class="offer-name">MindClub + Kit Sensorial</div>
             <div class="offer-price">R$ 99<span class="price-period">/mês</span></div>
             <div class="offer-tagline">Protocolo em vídeo + 2 itens sensoriais surpresa + bônus, entregues todo mês na sua porta</div>
 
             <ul class="offer-features">
-                <li>Protocolo em vídeo (2 min) - acesso imediato</li>
-                <li><strong>2 itens sensoriais surpresa</strong> todo mês</li>
-                <li><strong>1 bônus especial</strong> a cada entrega</li>
-                <li>Entrega mensal na sua porta</li>
+                <li><span class="feature-icon">🎥</span><span>Protocolo em vídeo (2 min) - acesso imediato</span></li>
+                <li><span class="feature-icon">🎁</span><span><strong>2 itens sensoriais surpresa</strong> todo mês</span></li>
+                <li><span class="feature-icon">✨</span><span><strong>1 bônus especial</strong> a cada entrega</span></li>
+                <li><span class="feature-icon">🚚</span><span>Entrega mensal na sua porta</span></li>
             </ul>
 
             <button class="cta-offer cta-offer-single" onclick="window.location.href='https://pineapple.mycartpanda.com/checkout?subscription=2688'">Quero começar →</button>
-            <div class="offer-guarantee">30 dias de garantia • Cancele quando quiser</div>
+            <div class="offer-guarantee">🛡️ 30 dias de garantia • Cancele quando quiser</div>
         </div>
 
         <div class="trust-badge-center"><span>🛡️</span><span>Se não gostar, devolvemos 100% em 30 dias</span></div>
