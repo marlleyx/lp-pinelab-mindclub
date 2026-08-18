@@ -103,6 +103,17 @@
         .faq-item[open] .faq-question { color: #4361ee; }
         .faq-answer { padding: 0 16px 16px 16px; font-size: 14px; color: #4a5568; line-height: 1.7; margin: 0; }
 
+        .whatsapp-section { background: #f0fdf4; padding: 40px 20px; }
+        .whatsapp-card { max-width: 440px; margin: 0 auto; text-align: center; }
+        .whatsapp-icon { width: 56px; height: 56px; margin: 0 auto 16px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35); }
+        .whatsapp-icon svg { width: 28px; height: 28px; color: white; }
+        .whatsapp-title { font-size: 20px; font-weight: 700; color: #1a202c; margin-bottom: 8px; }
+        .whatsapp-text { font-size: 15px; color: #4a5568; margin-bottom: 20px; line-height: 1.6; }
+        .whatsapp-button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: #25D366; color: white; text-decoration: none; font-weight: 700; font-size: 16px; padding: 14px 28px; border-radius: 100px; box-shadow: 0 6px 18px rgba(37, 211, 102, 0.3); transition: transform 0.2s, box-shadow 0.2s; }
+        .whatsapp-button:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4); }
+        .whatsapp-button:active { transform: scale(0.98); }
+        .whatsapp-button svg { width: 20px; height: 20px; }
+
         #below-fold-content { animation: fadeIn 0.8s ease forwards; }
         .faq-answer strong { color: #2d3748; }
 
@@ -288,6 +299,21 @@
             <summary class="faq-question">Qual material?</summary>
             <p class="faq-answer">Os itens são feitos em PLA, um material plástico biodegradável, produzido a partir de fontes renováveis como milho ou cana-de-açúcar.</p>
         </details>
+    </section>
+
+    <!-- WHATSAPP -->
+    <section class="whatsapp-section">
+        <div class="whatsapp-card">
+            <div class="whatsapp-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.36.101 11.945c0 2.104.549 4.156 1.595 5.965L0 24l6.24-1.635c1.746.951 3.71 1.454 5.71 1.455h.005c6.585 0 11.943-5.362 11.946-11.947.001-3.191-1.24-6.19-3.381-8.424zM12.05 21.784h-.004c-1.776 0-3.522-.477-5.045-1.377l-.362-.216-3.735.981.998-3.635-.238-.373c-.985-1.566-1.505-3.375-1.505-5.229C2.16 6.503 6.567 2.096 12.052 2.096c2.652.001 5.146 1.037 7.024 2.916 1.877 1.881 2.911 4.377 2.91 7.031-.003 5.484-4.411 9.741-9.936 9.741z"/></svg>
+            </div>
+            <h3 class="whatsapp-title">Ainda com dúvida?</h3>
+            <p class="whatsapp-text">Fala direto com a gente no WhatsApp e a gente te ajuda a decidir.</p>
+            <a class="whatsapp-button" href="https://wa.me/5585997561738?text=Quero%20o%20MindClub%2C%20mas%20tenho%20uma%20d%C3%BAvida" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.36.101 11.945c0 2.104.549 4.156 1.595 5.965L0 24l6.24-1.635c1.746.951 3.71 1.454 5.71 1.455h.005c6.585 0 11.943-5.362 11.946-11.947.001-3.191-1.24-6.19-3.381-8.424zM12.05 21.784h-.004c-1.776 0-3.522-.477-5.045-1.377l-.362-.216-3.735.981.998-3.635-.238-.373c-.985-1.566-1.505-3.375-1.505-5.229C2.16 6.503 6.567 2.096 12.052 2.096c2.652.001 5.146 1.037 7.024 2.916 1.877 1.881 2.911 4.377 2.91 7.031-.003 5.484-4.411 9.741-9.936 9.741z"/></svg>
+                Chamar no WhatsApp
+            </a>
+        </div>
     </section>
 
     </div><!-- FIM DO BELOW-FOLD-CONTENT -->
